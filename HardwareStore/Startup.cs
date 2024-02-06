@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using HardwareStore.Context;
 
 namespace HardwareStore;
 
@@ -13,6 +14,8 @@ public class Startup
 
 	public void ConfigureServices(IServiceCollection services)
 	{
+		services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Connection")));
+
 		services.AddControllersWithViews();
 		services.AddMemoryCache();
 		services.AddSession();
