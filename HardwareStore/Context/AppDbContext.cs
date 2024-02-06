@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using HardwareStore.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace HardwareStore.Context;
 
@@ -8,4 +9,7 @@ public class AppDbContext : DbContext
 	{
 
 	}
+
+	public DbSet<Categoria> Categorias { get; set; }
+	public DbSet<Produto> Produtos { get; set; }
 }
