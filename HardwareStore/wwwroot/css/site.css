@@ -20,3 +20,48 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.categorialista {
+    text-align:center;
+    font-size: 40px;
+    color: midnightblue;
+    text-transform:capitalize
+}
+
+a {
+    text-decoration: none;
+  
+    padding: 3px;
+}
+
+a:hover{
+    text-decoration:underline;
+    color:black;
+
+}
+
+.adicionarnovo {
+    font-size: 23px;
+    text-transform: capitalize;   
+}
+
+
+thead {
+    background-color: cornflowerblue;
+}
+
+
+table,td {
+    font-size: 20px;
+    border: 1px solid black;
+    text-align: center;
+    text-transform: capitalize;
+    background-color:ghostwhite  
+}
+
+th {
+    font-size: 30px   
+}
+
+
+
