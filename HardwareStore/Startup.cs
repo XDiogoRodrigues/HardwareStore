@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using HardwareStore.Context;
+using HardwareStore.Repository.Interfaces;
+using HardwareStore.Repository;
 
 namespace HardwareStore;
 
@@ -15,6 +17,8 @@ public class Startup
 	public void ConfigureServices(IServiceCollection services)
 	{
 		services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Connection")));
+
+		services.AddTransient<IRepositorioCategoria, RepositorioCategoria>();
 
 		services.AddControllersWithViews();
 		services.AddMemoryCache();
